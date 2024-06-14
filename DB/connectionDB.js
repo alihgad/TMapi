@@ -1,12 +1,7 @@
 import mysql from 'mysql2'
 
-const connection = mysql.createConnection('mysql://ucxttemrhliebvr4:JyEG7YSMbZD3zmbOpHtM@btcsbtlxu8fxtyyveetu-mysql.services.clever-cloud.com:3306/btcsbtlxu8fxtyyveetu')
-// const connection = mysql.createConnection({
-//     host: 'localhost',
-//     user: 'root',
-//     password: '',
-//     database: 'tasks'
-// })
+const connection = mysql.createConnection('mysql://Tasks_greatestmy:9f135c80f363c08389a1f408811f9655aa84406a@41c.h.filess.io:3307/Tasks_greatestmy')
+
 
 connection.connect(err => {
     if (err) throw err
