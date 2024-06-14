@@ -29,7 +29,7 @@ export const deleteTask = (req, res) => {
 
 export const doneTask = (req, res) => {
     const { id } = req.params
-    let query = `UPDATE tasks SET status = Done WHERE id = ${id}; `
+    let query = `UPDATE 'tasks' SET 'status'='Done' WHERE id = ${id}; `
     connection.execute(query, (err, result) => {
         if (err) console.log(err);
         return res.json({ result })
