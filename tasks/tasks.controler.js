@@ -35,3 +35,13 @@ export const doneTask = (req, res) => {
         return res.json({ result })
     })
 }
+
+export const updateTask = (req, res) => {
+    const { id } = req.params
+    const { title, description } = req.body
+    let query = `UPDATE tasks SET title = '${title}', description = '${description}' WHERE id = ${id}`
+    connection.execute(query, (err, result) => {
+        if (err) console.log(err);
+        return res.json({ result })
+    })
+}
