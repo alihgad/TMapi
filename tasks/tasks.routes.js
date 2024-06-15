@@ -10,7 +10,8 @@ const router  = Router()
 router.get('/', getTasks)
 router.post('/', addTask)
 router.delete('/:id', deleteTask)
-router.put('/:id', doneTask)
+router.patch('/:id', doneTask)
+router.put('/:id', updateTask)
 
 
 
